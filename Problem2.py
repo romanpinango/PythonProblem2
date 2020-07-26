@@ -7,11 +7,13 @@
 # By considering the terms in the Fibonacci sequence whose values do not
 # exceed four million, find the sum of the even-valued terms.
 
+# a is our fib(0), b is fib(1), and c will be f(n-1) + f(n-2)
 sumEven = 0
 a = 1
 b = 1
 c = 0
 
+# Iterate while fib(n) is less than 4mm
 while c < 4000000:
     c = b + a
     a = b
