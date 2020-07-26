@@ -14,7 +14,7 @@
 sumEven = 0
 a = 1
 b = 1
-c = 2
+c = 0
 
 # Iterate while fib(n) is less than 4mm
 while c < 4000000:
