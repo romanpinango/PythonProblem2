@@ -10,17 +10,23 @@
 # Key: If you notice that each 3 fib numbers is an even one, you can improve
 # it a little
 
-# a is our fib(0), b is fib(1), and c will be f(n-1) + f(n-2)
-sumEven = 0
-a = 1
-b = 1
-c = 0
+# Using recursion just for fun
 
-# Iterate while fib(n) is less than 4mm
-while c < 4000000:
-    sumEven += c
-    c = b + a
-    a = b + c
-    b = c + a
+def fibonacci(f):
+    if f<=1:
+        return 1
+    else:
+        return fibonacci(f-1) + fibonacci(f-2)
+
+limit = 4000000
+i = 0
+fib = 0
+sumEven = 0
+
+while fib < limit:
+    print(fib)
+    fib = fibonacci(i)
+    sumEven += fib if i % 3 == 2 else 0
+    i += 1
 
 print(sumEven)
